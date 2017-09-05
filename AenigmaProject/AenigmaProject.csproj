@@ -48,7 +48,7 @@
     <Compile Include="AenigmaLevel.cs" />
     <Compile Include="AenigmaLevelHandler.cs" />
     <Compile Include="AenigmaLevelManager.cs" />
-    <Compile Include="AenigmaMainMenu.cs" />
+    <Compile Include="AenigmaMenuUtils.cs" />
     <Compile Include="AenigmaUtils.cs" />
     <Compile Include="Exceptions.cs" />
     <Compile Include="Program.cs" />

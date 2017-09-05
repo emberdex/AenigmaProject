@@ -6,6 +6,9 @@ namespace AenigmaProject
     {
         public static Guid CurrentLevelGuid;
         public static AenigmaLevel CurrentLevel;
+
+        public static int NumberOfAttempts = 0;
+        public static DateTime LastVisit = DateTime.UtcNow;
         
         public static void JumpToLevel(Guid levelGuid)
         {

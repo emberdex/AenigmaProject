@@ -18,7 +18,7 @@ namespace AenigmaProject
             
             Console.WriteLine($"Reading levels from {LevelPath}.");
             
-            AenigmaMainMenu.BeginBootSequence();
+            AenigmaMenuUtils.BeginBootSequence();
             AenigmaLevelHandler.JumpToLevel(Guid.Empty);
         }
     }
