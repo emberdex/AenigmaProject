@@ -1,0 +1,2 @@
+[INFO // Initialising BBS display]                                                 
+[INFO // Handing over to BBS display]

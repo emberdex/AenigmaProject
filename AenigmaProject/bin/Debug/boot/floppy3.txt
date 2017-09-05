@@ -1,0 +1,5 @@
+
+[INFO // Reticulating and testing splines]                                         
+[INFO // Spline test result: LLAMA]                                                
+[INFO // Testing DES cohesion]                                                     
+[INFO // DES Cohesion test result: PASS]

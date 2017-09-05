@@ -1,0 +1,9 @@
+
+[WARN // Turbo button pressed - Engaging hyperspeed Capitan!]                      
+                                                                                   
+[INFO // Engaging network]                                                         
+                                                                                   
+[INFO // Checking for modem / network device on Bus 2, Dev 4, IRQ11]               
+[WARN // No device modem / network device found on Bus 2, Dev 4, IRQ11]            
+[WARN // Retry for device...]                                                      
+[ERR  // No device]

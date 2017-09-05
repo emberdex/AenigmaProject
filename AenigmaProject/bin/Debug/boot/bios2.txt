@@ -1,0 +1,44 @@
+
+
+
+                                                  Parable Microsystems Inc.                                              
+                                                    System Configuration                                                 
++-----------------------------------------------------------------------------------------------------------------------+
+|               CPU Type          : TJ6700-2 (TM)                       Base Memory       : 640k                        |
+|               CPU ID / ucode ID : 06B1/1C                             Extended Memory   : 1024k                       |
+|               CPU Clock         : 200Mhz                              Cache Memory      : 64k                         |
+|-----------------------------------------------------------------------------------------------------------------------|
+|               Diskette Drive  A : 1.44M, 3.5in.                       Display Type      : EGA/VGA                     |
+|               Diskette Drive  B : None                                Serial Port(s)    : 3F8 2FB                     |
+|               Hard Disk Drive C : User Type, 1024MB                   Parallel Port(s)  : 378                         |
+|               Hard Disk Drive D : None                                SDRAM at Row(s)   : 0 2 3 4 5                   |
+|               Hard Disk Drive E : None                                Display Cache Size: None                        |
++-----------------------------------------------------------------------------------------------------------------------+
+                                                                                                                         
+                                                                                                                         
+                                                                                                                         
+                                                                                                                         
+PCI device listing ...                                                                                                   
+Bus No.           Device No.          Func No.        Vendor/Device        Class       Device Class                 IRQ  
+-------------------------------------------------------------------------------------------------------------------------
+     0               31                  1             8086  244B           0101       IDE Cntrlr                    14  
+     0               31                  3             8086  2443           0C05       SMBus Cntrlr                  11  
+     0               31                  5             8086  2445           0401       Multimedia Device             11  
+     1                0                  0             10DE  0110           0300       Display Cntrlr                 9  
+     2                2                  0             10EC  8139           0200       Network Cntrlr                 5  
+     2                4                  0             1033  0035           0C03       Serial Bus Cntrlr              9  
+     2                4                  1             1033  0035           0C03       Serial Bus Cntrlr             11  
+     2                4                  2             1033  0035           0C03       Serial Bus Cntrlr              5  
+     2                4                  5             109E  0878           0400       Multimedia Device              9  
+                                                                                       ACPI Controller                9  
+                                                                                                                         
+                                                                                                                         
+                                                                                                                         
+                                                                                                                         
+                                                                                                                         
+                                                                                                                         
+                                                                                                                         
+Verifying DMI Pool Data..............                                                                                    
+                                                                                                                         
+Booting from Diskette Drive A...                                                                                         
+                                                                                                                         

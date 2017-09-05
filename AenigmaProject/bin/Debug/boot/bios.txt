@@ -1,0 +1,44 @@
+  __ _                                                                                                                     
+ / _` |                                                                                                                    
+| (_| | Railgun AIOS v0.31PC                                                                                               
+ \__,_| Copyright (C) 1990 - 1992, Parable Microsystems Inc.                                                               
+                                                                                                                          
+                                                                                                                          
+PAMI ABN-SLI Premium ACPI AIOS Revision 1011-001                                                                          
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          
+Main Processor: TJ6700-2 (tm)                                                                                             
+Memory Testing: 1024k+640k OK (1664k total)                                                                               
+Memory Information: DDR 400  Dual Channel, 128-bit                                                                        
+                                                                                                                          
+                                                                                                                          
+Chipset Model: PAMI n2, Revision 004                                                                                      
+                                                                                                                          
+Primary IDE Master     : Hitugu HI2448K2HD 1024MB                                                                         
+Primary IDE Slave      : None                                                                                             
+Secondary IDE Master   : Sonari FD87443 Hi-D FDD                                                                          
+Secondary IDE Slave    : None                                                                                             
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          
+Press DEL to enter SETUP...   Continuing...                                                                              
+19/09/1992-NF-CK004-ABNSLI-P-00                                                                                          

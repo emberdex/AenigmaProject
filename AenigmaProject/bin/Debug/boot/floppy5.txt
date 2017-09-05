@@ -1,0 +1,4 @@
+
+[INFO // Checking for modem / network device on Bus 2, Dev 2, IRQ5]                
+[INFO // Modem / network device found on Bus2, Dev 2, IRQ5!]                       
+[INFO // Establishing connection]
