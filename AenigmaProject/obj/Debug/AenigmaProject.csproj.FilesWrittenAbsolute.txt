@@ -1,0 +1,6 @@
+/home/monotron/RiderProjects/AenigmaProject/AenigmaProject/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/monotron/RiderProjects/AenigmaProject/AenigmaProject/bin/Debug/AenigmaProject.pdb
+/home/monotron/RiderProjects/AenigmaProject/AenigmaProject/bin/Debug/AenigmaProject.exe
+/home/monotron/RiderProjects/AenigmaProject/AenigmaProject/obj/Debug/AenigmaProject.exe
+/home/monotron/RiderProjects/AenigmaProject/AenigmaProject/obj/Debug/AenigmaProject.pdb
+/home/monotron/RiderProjects/AenigmaProject/AenigmaProject/bin/Debug/Newtonsoft.Json.dll

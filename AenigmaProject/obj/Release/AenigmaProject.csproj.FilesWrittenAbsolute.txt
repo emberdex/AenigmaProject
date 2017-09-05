@@ -1,0 +1,5 @@
+/home/monotron/RiderProjects/AenigmaProject/AenigmaProject/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/monotron/RiderProjects/AenigmaProject/AenigmaProject/bin/Release/AenigmaProject.pdb
+/home/monotron/RiderProjects/AenigmaProject/AenigmaProject/bin/Release/AenigmaProject.exe
+/home/monotron/RiderProjects/AenigmaProject/AenigmaProject/obj/Release/AenigmaProject.exe
+/home/monotron/RiderProjects/AenigmaProject/AenigmaProject/obj/Release/AenigmaProject.pdb
