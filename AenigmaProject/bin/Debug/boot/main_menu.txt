@@ -20,7 +20,7 @@
                      (___/    \___)\_______) \___|\____\)(__\_|_)\_______) |___|\__/|___|(___/    \___)                     
                                                                                                                             
                                                                                                                             
-                          Login Attempts: XXX     Last Login: XX:XX XX/XX/XX     Users Online: XX                           
+                          Login Attempts: {0}     Last Login: {1}         Users Online: {2}                           
                        For assistance with the Aenigma BBS, please refer to the Users' Reference Guide                      
                                                                                                                             
                                                                                                                             

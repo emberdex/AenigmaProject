@@ -1,8 +1,8 @@
 
 
 
-                                                  Parable Microsystems Inc.                                              
-                                                    System Configuration                                                 
+                                                Parable Microsystems Inc.                                              
+                                                  System Configuration                                                 
 +-----------------------------------------------------------------------------------------------------------------------+
 |               CPU Type          : TJ6700-2 (TM)                       Base Memory       : 640k                        |
 |               CPU ID / ucode ID : 06B1/1C                             Extended Memory   : 1024k                       |
