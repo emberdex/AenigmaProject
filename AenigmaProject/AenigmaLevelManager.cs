@@ -8,6 +8,9 @@ namespace AenigmaProject
 {
     public class AenigmaLevelManager
     {
+        /// <summary>
+        /// The list of levels.
+        /// </summary>
         private static List<AenigmaLevel> levels = new List<AenigmaLevel>();
 
         /// <summary>
@@ -87,6 +90,12 @@ namespace AenigmaProject
             }
         }
 
+        /// <summary>
+        /// Function to get a level by password, much like GetLevelByGuid.
+        /// </summary>
+        /// <param name="password">The password to match against.</param>
+        /// <returns>The level matching the password, if found.</returns>
+        /// <exception cref="LevelNotFoundException">Thrown if a level with the specified password is not found.</exception>
         public static AenigmaLevel GetLevelByPassword(string password)
         {
             foreach (AenigmaLevel level in levels)

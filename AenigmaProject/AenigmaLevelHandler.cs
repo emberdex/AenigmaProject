@@ -1,29 +1,58 @@
 ﻿using System;
+using System.Drawing.Imaging;
 
 namespace AenigmaProject
 {
     public class AenigmaLevelHandler
     {
+        /// <summary>
+        /// The GUID of the current level.
+        /// </summary>
         public static Guid CurrentLevelGuid;
+        
+        /// <summary>
+        /// The current level object.
+        /// </summary>
         public static AenigmaLevel CurrentLevel;
 
+        /// <summary>
+        /// The number of tries at the puzzle since the program was started.
+        /// </summary>
         public static int NumberOfAttempts = 0;
+        
+        /* /// <summary>
+        /// The time the game was last played.
+        /// </summary>
         public static DateTime LastVisit = DateTime.UtcNow;
         
-        public static void JumpToLevel(Guid levelGuid)
-        {
-            // Clear the screen.
-            Console.Clear();
+        EARMARKED FOR REMOVAL - DUPLICATE OF AenigmaMenuUtils.LastPlayed*/
+        
+        /// <summary>
+        /// The number of lives the player has remaining.
+        /// </summary>
+        public static int NumberOfLives = 3;
 
-            // Get the level by GUID.
-            try
+        public static void JumpToLevel(AenigmaLevel level)
+        {
+            // Do some sanity checking on the level.
+            if (level?.ID == Guid.Empty)
             {
-                CurrentLevel = AenigmaLevelManager.GetLevelById(levelGuid);
+                throw new InvalidLevelException("Cannot load a level with an empty GUID.");
             }
-            catch (LevelNotFoundException lnfe)
+
+            if (string.IsNullOrEmpty(level.Data) || string.IsNullOrWhiteSpace(level.Data))
             {
-                Console.WriteLine($"Can't jump to level GUID {levelGuid} because it doesn't exist.");
+                throw new InvalidLevelException("Cannot load a level with no level data.");
             }
+            
+            // Reset the lives counter to 3.
+            NumberOfLives = 3;
+            
+            // If this is the starting level, then increment the attempts counter and set the "last played" time.
+            NumberOfAttempts++;
+            AenigmaMenuUtils.LastPlayed = DateTime.UtcNow;
+            
+            
         }
     }
 }

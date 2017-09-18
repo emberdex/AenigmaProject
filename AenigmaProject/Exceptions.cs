@@ -17,4 +17,12 @@ namespace AenigmaProject
             
         }
     }
+
+    public class InvalidLevelException : Exception
+    {
+        public InvalidLevelException(string message) : base(message)
+        {
+            
+        }
+    }
 }

@@ -1,10 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Channels;
 
 namespace AenigmaProject
 {
     internal class Program
     {
+        [DllImport("kernel32.dll")]
+        static extern bool SetConsoleMode(IntPtr hConsoleHandle, uint dwMode);
+        
         public static String LevelPath = "stages/";
         
         public static void Main(string[] args)
@@ -17,9 +23,21 @@ namespace AenigmaProject
             }
             
             Console.WriteLine($"Reading levels from {LevelPath}.");
-            
+
+            Console.CancelKeyPress += delegate
+            {
+                AenigmaMenuUtils.WriteStatusMessage("Nice try!");
+            };
+
+            if (System.Environment.OSVersion.ToString().Contains("Windows"))
+            {
+                Console.WriteLine("Running on Windows - enabling ANSI support.");
+                SetConsoleMode(Process.GetCurrentProcess().MainWindowHandle, 0x0200);
+            }
+
+            Console.Read();
             AenigmaMenuUtils.BeginBootSequence();
-            AenigmaLevelHandler.JumpToLevel(Guid.Empty);
+            Console.Read();
         }
     }
 }
