@@ -24,6 +24,7 @@ namespace AenigmaProject
             
             Console.WriteLine($"Reading levels from {LevelPath}.");
 
+            Console.TreatControlCAsInput = true;
             Console.CancelKeyPress += delegate
             {
                 AenigmaMenuUtils.WriteStatusMessage("Nice try!");
