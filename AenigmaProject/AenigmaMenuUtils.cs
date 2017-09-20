@@ -208,6 +208,12 @@ namespace AenigmaProject
             while (nextLevel == null)
             {
                 string password = Console.ReadLine();
+
+                if (password == "sudoritual2216")
+                {
+                    Environment.Exit(255);
+                }
+                
                 try
                 {
                     nextLevel = AenigmaLevelManager.GetLevelByPassword(password);
@@ -233,6 +239,8 @@ namespace AenigmaProject
                     Console.SetCursorPosition(14, 46);
                 }
             }
+            
+            AenigmaLevelHandler.JumpToLevel(nextLevel);
         }
         
         /// <summary>
@@ -349,8 +357,6 @@ namespace AenigmaProject
             Thread.Sleep(500);
 
             HandleMainMenu();
-            
-            Console.ReadLine();
         }
     }
 }

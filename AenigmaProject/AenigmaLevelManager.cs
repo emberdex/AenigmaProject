@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing.Printing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 
@@ -78,7 +79,7 @@ namespace AenigmaProject
             {
                 foreach(string file in Directory.EnumerateFiles(path).Where(n => n.EndsWith(".stage")))
                 {
-                    using (StreamReader sr = new StreamReader(path))
+                    using (StreamReader sr = new StreamReader(file))
                     {
                         levels.Add(AenigmaLevel.Deserialize(sr.ReadToEnd()));
                     }
@@ -100,7 +101,7 @@ namespace AenigmaProject
         {
             foreach (AenigmaLevel level in levels)
             {
-                if (level.Password.Equals(password)) return level;
+                if (String.Compare(level.Password, password, true, CultureInfo.CurrentCulture) == 0) return level;
             }
             
             throw new LevelNotFoundException("A level with the specified password could not be found.");
