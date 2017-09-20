@@ -215,7 +215,7 @@ namespace AenigmaProject
                 catch (LevelNotFoundException)
                 {
                     FailedLoginAttempts++;
-                    if (FailedLoginAttempts > 3)
+                    if (FailedLoginAttempts >= 3)
                     {
                         AenigmaMenuUtils.WriteStatusMessage(
                             "Whatever it is you're doing, please stop it and just type \"start\".");
