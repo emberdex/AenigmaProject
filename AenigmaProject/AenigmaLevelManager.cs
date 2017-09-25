@@ -1,9 +1,11 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Drawing.Printing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using Newtonsoft.Json;
 
 namespace AenigmaProject
 {
@@ -81,7 +83,14 @@ namespace AenigmaProject
                 {
                     using (StreamReader sr = new StreamReader(file))
                     {
-                        levels.Add(AenigmaLevel.Deserialize(sr.ReadToEnd()));
+                        try
+                        {
+                            levels.Add(AenigmaLevel.Deserialize(sr.ReadToEnd()));
+                        }
+                        catch (JsonReaderException jre)
+                        {
+                            throw new InvalidLevelDataException("", jre, file);
+                        }
                     }
                 }
             }

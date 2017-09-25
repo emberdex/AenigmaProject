@@ -74,7 +74,7 @@ namespace AenigmaProject
             
             // Draw the level data.
             Console.Clear();
-            Console.Write(level.Data);
+            AenigmaUtils.SlowPrint(level.Data, 2);
             
             HandleLevel(CurrentLevel);
         }

@@ -47,16 +47,7 @@ namespace AenigmaProject
 
         public static AenigmaLevel Deserialize(string json)
         {
-            AenigmaLevel tmp = JsonConvert.DeserializeObject<AenigmaLevel>(json,
-                new JsonSerializerSettings
-                {
-                    Error = delegate(object sender, Newtonsoft.Json.Serialization.ErrorEventArgs args)
-                    {
-                        throw new LevelLoadException(
-                            $"Encountered {args.ErrorContext.Error} while deserialising level data.");
-                    }
-                }
-            );
+            AenigmaLevel tmp = JsonConvert.DeserializeObject<AenigmaLevel>(json);
 
             return tmp;
         }

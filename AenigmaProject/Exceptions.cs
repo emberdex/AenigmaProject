@@ -18,20 +18,42 @@ namespace AenigmaProject
     /// </summary>
     public class LevelLoadException : Exception
     {
+        public string FilePath;
         public LevelLoadException(string message) : base(message)
+        {
+            
+        }
+
+        public LevelLoadException(string message, string filePath)
+        {
+            this.FilePath = filePath;
+        }
+    }
+
+    public class InvalidLevelException : Exception
+    {
+        public InvalidLevelException(string message) : base(message)
         {
             
         }
     }
 
     /// <summary>
-    /// Exception thrown if a level is invalid.
+    /// Exception thrown if level JSON is invalid.
     /// </summary>
-    public class InvalidLevelException : Exception
+    public class InvalidLevelDataException : Exception
     {
-        public InvalidLevelException(string message) : base(message)
+        public Exception OriginalException;
+        public string Path;
+        public InvalidLevelDataException(string message) : base(message)
         {
             
+        }
+
+        public InvalidLevelDataException(string message, Exception e, String path) : base(message)
+        {
+            this.OriginalException = e;
+            this.Path = path;
         }
     }
 }
