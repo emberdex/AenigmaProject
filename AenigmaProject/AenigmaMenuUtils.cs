@@ -250,6 +250,32 @@ namespace AenigmaProject
         {
             ClearBox();
 
+            using (StreamReader sr = new StreamReader("boot/a0.txt"))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    WriteLineToBox(line, 0);
+                }
+            }
+
+            Console.ReadLine();
+            
+            ClearBox();
+
+            using (StreamReader sr = new StreamReader("boot/a1.txt"))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    WriteLineToBox(line, 0);
+                }
+            }
+
+            Console.ReadLine();
+
+            ClearBox();
+            
             using (StreamReader sr = new StreamReader("boot/bios.txt"))
             {
                 string line;

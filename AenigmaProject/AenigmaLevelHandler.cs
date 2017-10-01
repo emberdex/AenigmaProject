@@ -26,7 +26,7 @@ namespace AenigmaProject
         /// </summary>
         public static DateTime LastVisit = DateTime.UtcNow;
         
-        EARMARKED FOR REMOVAL - DUPLICATE OF AenigmaMenuUtils.LastPlayed*/
+        EARMARKED FOR REMOVAL - DUPLICATE OF AenigmaMenuUtils.LastPlayed */
         
         /// <summary>
         /// The number of lives the player has remaining.
