@@ -77,6 +77,8 @@ namespace AenigmaProject
             int cursorX = Console.CursorLeft;
             int cursorY = Console.CursorTop;
             
+            AenigmaMenuUtils.ClearStatusMessage();
+            
             Console.SetCursorPosition(3, Console.WindowHeight - 1);
             // Set background colour to white, and foreground colour to black.
             Console.Write("\x1B[47m\x1B[30m");
@@ -239,7 +241,8 @@ namespace AenigmaProject
                     Console.SetCursorPosition(14, 46);
                 }
             }
-            
+
+            FailedLoginAttempts = 0;
             AenigmaLevelHandler.JumpToLevel(nextLevel);
         }
         

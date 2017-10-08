@@ -1,2 +1,2 @@
 #!/bin/bash
-xbuild /p:Configuration=Release AenigmaProject.csproj
+xbuild /p:Configuration=Debug AenigmaProject.csproj
