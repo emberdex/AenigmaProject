@@ -128,7 +128,7 @@ namespace AenigmaProject
             
             // Draw the level data.
             Console.Clear();
-            AenigmaUtils.SlowPrint(level.Data, 2);
+            AenigmaUtils.SlowPrint(level.Data, 1);
             
             HandleLevel(CurrentLevel);
         }
