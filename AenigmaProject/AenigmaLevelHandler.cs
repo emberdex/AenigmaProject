@@ -69,7 +69,7 @@ namespace AenigmaProject
                     else
                     {
                         NumberOfLives -= 1;
-                        AenigmaMenuUtils.WriteStatusMessage($"Incorrect password. You have {NumberOfLives} attemps left.");
+                        AenigmaMenuUtils.WriteStatusMessage($"Incorrect password. You have {NumberOfLives} attempts left.");
                         Thread.Sleep(1000);
                     }
                 }
@@ -128,7 +128,7 @@ namespace AenigmaProject
             
             // Draw the level data.
             Console.Clear();
-            Console.Write(level.Data, 2);
+            AenigmaUtils.SlowPrint(level.Data, 2);
             
             HandleLevel(CurrentLevel);
         }
