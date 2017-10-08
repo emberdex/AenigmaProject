@@ -20,7 +20,7 @@
                      (___/    \___)\_______) \___|\____\)(__\_|_)\_______) |___|\__/|___|(___/    \___)                     
                                                                                                                             
                                                                                                                             
-                          Login Attempts: {0}     Last Login: {1}         Users Online: {2}                           
+                          Login Attempts: {0}     Last Login: {1}         Users Online: {2}
                        For assistance with the Aenigma BBS, please refer to the Users' Reference Guide                      
                                                                                                                             
                                                                                                                             
@@ -34,9 +34,9 @@
                                                                                                                             
                                                                                                                             
                                                                                                                             
-[Aenigma]                                                                                                                   
+{color_begin}[Aenigma]                                                                                                                   
  Welcome to the system!                                                                                                     
- Please enter a passcode or type 'start' to begin.                                                                          
+ Please enter a passcode or type 'start' to begin.                                                                          {color_end}
                                                                                                                             
 [User]                                                                                                                      
  Passcode:                                                                                                                  

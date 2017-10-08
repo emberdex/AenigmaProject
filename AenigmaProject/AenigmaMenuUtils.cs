@@ -198,6 +198,9 @@ namespace AenigmaProject
                             CurrentUsers);
                     }
                     
+                    line = line.Replace("{color_begin}", "\x1B[0;32m");
+                    line = line.Replace("{color_end}", "\x1B[0m");
+                    
                     WriteLineToBox(line, 0);
                 }
             }
