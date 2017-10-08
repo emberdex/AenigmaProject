@@ -63,17 +63,13 @@ namespace AenigmaProject
 
                     if (response.ToLower().Equals(level.CorrectAnswer.ToLower()))
                     {
-                        // Correct password!
-                        AenigmaMenuUtils.WriteStatusMessage("Password accepted. Loading...");
-                        Thread.Sleep(1000);
-
                         break;
                     }
 
                     else
                     {
                         NumberOfLives -= 1;
-                        AenigmaMenuUtils.WriteStatusMessage($"Incorrect password. You have {NumberOfLives} lives left.");
+                        AenigmaMenuUtils.WriteStatusMessage($"Incorrect password. You have {NumberOfLives} attemps left.");
                         Thread.Sleep(1000);
                     }
                 }

@@ -243,6 +243,7 @@ namespace AenigmaProject
             }
 
             FailedLoginAttempts = 0;
+            LifetimeAttempts += 1;
             AenigmaLevelHandler.JumpToLevel(nextLevel);
         }
         
