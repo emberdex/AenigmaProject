@@ -36,6 +36,10 @@ namespace AenigmaProject
         /// </summary>
         public static int FailedLoginAttempts = 0;
 
+        public static bool ShouldTimeout = true;
+        public static int NumberOfTimeouts = 0;
+        public static int TimeSinceInputAttempts = 0;
+
         /// <summary>
         /// Generates a random phone number, in the format 01632 960xxx, where xxx is between 000 and 999.
         /// This number is listed in Ofcom's range of telephone numbers for use in TV and radio drama programmes, 
@@ -210,13 +214,19 @@ namespace AenigmaProject
             Console.SetCursorPosition(14, 46);
             
             AenigmaLevel nextLevel = null;
-            while (nextLevel == null)
+            int LastNumberOfTimeouts = NumberOfTimeouts;
+            while (nextLevel == null && LastNumberOfTimeouts == NumberOfTimeouts)
             {
-                string password = Console.ReadLine();
+                string password = AenigmaUtils.ReadLine();
 
                 if (password == "sudoritual2216")
                 {
                     Environment.Exit(255);
+                }
+
+                if (password == "sudoritual2217")
+                {
+                    BeginBootSequence();
                 }
                 
                 try
@@ -247,6 +257,9 @@ namespace AenigmaProject
 
             FailedLoginAttempts = 0;
             LifetimeAttempts += 1;
+
+            if (LastNumberOfTimeouts != NumberOfTimeouts) return;
+            
             AenigmaLevelHandler.JumpToLevel(nextLevel);
         }
         
@@ -266,7 +279,7 @@ namespace AenigmaProject
                 }
             }
 
-            Console.ReadLine();
+            AenigmaUtils.ReadLine();
             
             ClearBox();
 
@@ -279,7 +292,7 @@ namespace AenigmaProject
                 }
             }
 
-            Console.ReadLine();
+            AenigmaUtils.ReadLine();
 
             ClearBox();
             

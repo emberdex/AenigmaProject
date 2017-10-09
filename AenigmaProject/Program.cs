@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Diagnostics;
 using System.Linq.Expressions;
 using System.Threading;
@@ -9,6 +10,7 @@ namespace AenigmaProject
     internal class Program
     {
         public static String LevelPath = "stages";
+        public const int Timeout = 300;
         
         public static void Main(string[] args)
         {
@@ -47,6 +49,26 @@ namespace AenigmaProject
                 AenigmaMenuUtils.WriteStatusMessage("Nice try!");
                 return;
             };
+            
+            Thread t = new Thread(new ThreadStart(() =>
+                {
+                    while (true)
+                    {
+                        Thread.Sleep(1000);
+                        if (AenigmaMenuUtils.ShouldTimeout)
+                        {
+                            AenigmaMenuUtils.TimeSinceInputAttempts += 1;
+                            if (AenigmaMenuUtils.TimeSinceInputAttempts >= Timeout)
+                            {
+                                AenigmaMenuUtils.NumberOfTimeouts += 1;
+                                AenigmaMenuUtils.BeginBootSequence();
+                            }
+                        }
+                    }
+                }
+            ));
+
+            t.Start();
             
             AenigmaMenuUtils.BeginBootSequence();
         }

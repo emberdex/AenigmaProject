@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Drawing.Imaging;
-using System.Globalization;
 using System.Threading;
 
 namespace AenigmaProject
@@ -38,7 +36,7 @@ namespace AenigmaProject
         {
             Console.SetCursorPosition(26, 23);
 
-            string tmp = Console.ReadLine();
+            string tmp = AenigmaUtils.ReadLine();
             
             Console.SetCursorPosition(26, 23);
             for (int i = 27; i < 45; i++)
@@ -54,10 +52,18 @@ namespace AenigmaProject
         {
             AenigmaLevel nextLevel = AenigmaLevelManager.GetLevelById(level.NextStage);
             
-            // TODO: ensure user input works correctly.
             if (level.LevelType == AenigmaLevelType.Level)
             {
-                while (NumberOfLives > 0)
+                Console.SetCursorPosition(107, 43);
+                Console.Write("   ");
+                Console.SetCursorPosition(107, 43);
+                for (int i = 0; i < NumberOfLives; i++)
+                {
+                    Console.Write("X");
+                }
+                
+                int LastNumberOfTimeouts = AenigmaMenuUtils.NumberOfTimeouts;
+                while (NumberOfLives > 0 && LastNumberOfTimeouts == AenigmaMenuUtils.NumberOfTimeouts)
                 {
                     string response = HandleLevelUserInput();
 
@@ -69,16 +75,27 @@ namespace AenigmaProject
                     else
                     {
                         NumberOfLives -= 1;
-                        AenigmaMenuUtils.WriteStatusMessage($"Incorrect password. You have {NumberOfLives} attempts left.");
+                        
+                        Console.SetCursorPosition(107, 43);
+                        Console.Write("   ");
+                        Console.SetCursorPosition(107, 43);
+                        for (int i = 0; i < NumberOfLives; i++)
+                        {
+                            Console.Write("X");
+                        }
+                        
                         Thread.Sleep(1000);
                     }
                 }
             } 
             else if (level.LevelType == AenigmaLevelType.Cutscene)
             {
-                AenigmaMenuUtils.WriteStatusMessage("Press ENTER to continue.");
+                if (level.ID != Guid.Parse("7580aa8a-57dc-41a7-bb06-ab523ba0f83e") || level.ID != Guid.Parse("30821326-7264-49bc-bf31-3360392f9065"))
+                {
+                    AenigmaMenuUtils.WriteStatusMessage("Press ENTER to continue.");
+                }
 
-                Console.ReadLine();
+                AenigmaUtils.ReadLine();
             }
 
             if (NumberOfLives == 0)
@@ -128,7 +145,7 @@ namespace AenigmaProject
             
             // Draw the level data.
             Console.Clear();
-            AenigmaUtils.SlowPrint(level.Data, 1);
+            AenigmaUtils.SlowPrint(level.Data, 0);
             
             HandleLevel(CurrentLevel);
         }

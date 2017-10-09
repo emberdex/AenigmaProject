@@ -32,6 +32,14 @@ namespace AenigmaProject
             }
         }
 
+        public static string ReadLine()
+        {
+            string str = Console.ReadLine();
+            AenigmaMenuUtils.TimeSinceInputAttempts = 0;
+            
+            return str;
+        }
+
         /// <summary>
         /// Prints a string with a delay.
         /// </summary>
