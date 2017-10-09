@@ -90,7 +90,7 @@ namespace AenigmaProject
             } 
             else if (level.LevelType == AenigmaLevelType.Cutscene)
             {
-                if (level.ID != Guid.Parse("994495c4-7bef-4e39-a449-55a3d39743fa") || level.ID != Guid.Parse("38f677db-e167-4f9e-be18-a5def9b7a683"))
+                if (level.ID != Guid.Parse("994495c4-7bef-4e39-a449-55a3d39743fa") && level.ID != Guid.Parse("38f677db-e167-4f9e-be18-a5def9b7a683"))
                 {
                     AenigmaMenuUtils.WriteStatusMessage("Press ENTER to continue.");
                 }
