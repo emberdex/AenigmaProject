@@ -95,12 +95,13 @@ namespace AenigmaProject
                     AenigmaMenuUtils.WriteStatusMessage("Press ENTER to continue.");
                 }
 
-                AenigmaUtils.ReadLine();
+                Console.ReadKey(true);
+                AenigmaMenuUtils.TimeSinceInputAttempts = 0;
             }
 
             if (NumberOfLives == 0)
             {
-                AenigmaMenuUtils.WriteStatusMessage("You have been banned. Reason: brute forcing.");
+                AenigmaMenuUtils.WriteStatusMessage("You have been banned. Reason: Brute forcing.");
                 Thread.Sleep(1000);
                 
                 AenigmaMenuUtils.HandleMainMenu();
